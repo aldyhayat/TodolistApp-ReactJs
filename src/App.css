@@ -1,38 +1,78 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin: auto;
+  margin-top: 4%;
+  width: 50%;
+  padding: 10px;
+  background-color: #388F38;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 10%;
+  color: #FAE392;
 }
 
-.App-link {
-  color: #61dafb;
+.inputAdd{
+  height: 34px;
+  width: 60%;
+  border-radius: 10px 0px 0px 10px;
+  text-align: center;
+  border: none;
+  background-color: #497049;
+  color: #FAE392;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::placeholder {
+  color: #FAE392;
+  opacity: 1; /* Firefox */
 }
+
+.buttonAdd{
+  height: 38px;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  background-color:  #FAE392;
+  color: #497049;
+}
+.buttonRemove{
+  float: left;
+  background-color: #497049;
+  color: #FAE392;
+  margin-right: 10px;
+  margin-top: 6px;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.ul {
+  margin-left: -8%;
+  margin-top: 4%;
+}
+
+.list {
+  float: left;
+  background-color: #497049;
+  width: 80%;
+  height: 36px;
+  border-radius: 10px;
+  list-style: none;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.p{
+  margin: 0;
+  text-align: center;
+  margin-top: 4px;
+
+}
+

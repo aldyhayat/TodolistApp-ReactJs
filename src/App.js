@@ -1,22 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AddTask from './components/AddTask';
+import ListTask from './components/ListTask';
 
 function App() {
+  const [getTask, setNewTask] = useState('')
+  const [getDataTask, setDataTask] = useState([])
+  
+  function Add(){
+    setDataTask([...getDataTask,getTask])
+    setNewTask('')
+  }
+
+  function Remove(index){
+  const updateTask = getDataTask.filter((_,a) => a  !== index)
+  console.log(updateTask)
+  setDataTask(updateTask)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1 className='Title'>Todolist</h1>
+       <p>Untuk menulis berbagi macam task. </p>
+       <AddTask Add = {Add} getTask = {getTask} setNewTask = {setNewTask}  />
+       <br />
+       <br  />
+       <ListTask getDataTask = {getDataTask} Remove ={Remove} />
       </header>
     </div>
   );
